@@ -3,55 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kvinnliga Löparklubben Stockholm</title>
+    <title>She Runs Sthlm - Löpargemenskap för tjejer</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Kvinnliga Löparklubben Stockholm</h1>
-        <nav>
-            <ul>
-                <li><a href="#om">Om Oss</a></li>
-                <li><a href="#traningar">Träningar</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <div class="logo">
+                <img src="https://via.placeholder.com/150x80/FFC0CB/FFFFFF?text=She+Runs+Sthlm" alt="She Runs Sthlm Logotyp">
+                </div>
+            <nav>
+                <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+                <ul class="nav-links">
+                    <li><a href="#about">Om oss</a></li>
+                    <li><a href="#community">Gemenskap</a></li>
+                    <li><a href="#tips">Löpartips</a></li>
+                    <li><a href="#forum">Forum</a></li>
+                    <li><a href="#instagram">Instagram</a></li>
+                    <li><a href="#join">Bli medlem</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="om">
-        <h2>Om Oss</h2>
-        <p>Vi är en gemenskap av kvinnor i alla åldrar och former som älskar att springa tillsammans. Oavsett om du är nybörjare eller van löpare, är du varmt välkommen!</p>
-    </section>
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Spring med styrka, spring med glädje.</h1>
+                <p>She Runs Sthlm – din löpargemenskap i Stockholm för tjejer som älskar att springa.</p>
+                <a href="#join" class="btn-primary">Gå med nu!</a>
+            </div>
+        </section>
 
-    <section id="traningar">
-        <h2>Våra Träningar</h2>
-        <ul>
-            <li>Måndagar: Intervallpass i Tantolunden</li>
-            <li>Onsdagar: Lugn distans vid Djurgården</li>
-            <li>Lördagar: Långpass med fika efteråt</li>
-        </ul>
-        <button onclick="visaSchema()">Visa Veckoschema</button>
-        <div id="schema" style="display: none;"></div>
-    </section>
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>Om oss</h2>
+                <p>Vi är "She Runs Sthlm", en dynamisk och inkluderande löparklubb för tjejer i alla åldrar och på alla nivåer. Vårt mål är att skapa en stark och inspirerande gemenskap där vi stöttar, motiverar och lyfter varandra genom löpning. Vi tror på att löpning är mer än bara träning – det är en källa till glädje, hälsa och en fantastisk möjlighet att knyta nya vänskapsband.</p>
+                <p>Våra pass är anpassade för att alla ska känna sig välkomna, oavsett om du är nybörjare eller en erfaren löpare. Vi erbjuder allt från lugna joggturer till intervallpass och teknikträning. Kom och upplev glädjen i att springa tillsammans!</p>
+            </div>
+        </section>
 
-    <section id="kontakt">
-        <h2>Kontakt</h2>
-        <form id="kontaktform">
-            <label for="namn">Namn:</label>
-            <input type="text" id="namn" name="namn" required>
+        <section id="community" class="community-section">
+            <div class="container">
+                <h2>Vår Gemenskap</h2>
+                <div class="community-grid">
+                    <div class="community-item">
+                        <i class="fas fa-heart"></i>
+                        <h3>Stödjande</h3>
+                        <p>Vi peppar och stöttar varandra genom varje kilometer, oavsett tempo eller distans.</p>
+                    </div>
+                    <div class="community-item">
+                        <i class="fas fa-laugh-beam"></i>
+                        <h3>Glädjefylld</h3>
+                        <p>Löpning ska vara kul! Vi fokuserar på glädjen i rörelse och att ha roligt tillsammans.</p>
+                    </div>
+                    <div class="community-item">
+                        <i class="fas fa-users-line"></i>
+                        <h3>Inkluderande</h3>
+                        <p>Alla är välkomna, oavsett erfarenhet. Vi springer tillsammans och lär av varandra.</p>
+                    </div>
+                    <div class="community-item">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Stark</h3>
+                        <p>Tillsammans bygger vi en stark och hållbar gemenskap som inspirerar till rörelse.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <label for="epost">E-post:</label>
-            <input type="email" id="epost" name="epost" required>
+        <section id="tips" class="tips-section">
+            <div class="container">
+                <h2>Löpartips & Inspiration</h2>
+                <div class="tip-categories">
+                    <button class="tip-category-btn active" data-category="all">Alla tips</button>
+                    <button class="tip-category-btn" data-category="technique">Löpteknik</button>
+                    <button class="tip-category-btn" data-category="warmup">Uppvärmning</button>
+                    <button class="tip-category-btn" data-category="stretch">Stretchövningar</button>
+                </div>
+                <div class="tip-grid">
+                    <article class="tip-item technique">
+                        <img src="https://via.placeholder.com/300x200/FFD1DC/555555?text=Löpteknik+1" alt="Löpteknik bild">
+                        <h3>Effektiv Löpteknik</h3>
+                        <p>Lär dig grunderna för en energibesparande löpteknik. Fokus på hållning och fotisättning.</p>
+                        <div class="video-placeholder">
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                    </article>
+                    <article class="tip-item warmup">
+                        <img src="https://via.placeholder.com/300x200/FFD1DC/555555?text=Uppvärmning" alt="Uppvärmning bild">
+                        <h3>Snabb Uppvärmning före passet</h3>
+                        <p>En kort guide till de viktigaste uppvärmningsövningarna innan du ger dig ut på löprundan.</p>
+                        <div class="video-placeholder">
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                    </article>
+                    <article class="tip-item stretch">
+                        <img src="https://via.placeholder.com/300x200/FFD1DC/555555?text=Stretchövning" alt="Stretchövning bild">
+                        <h3>Viktiga Stretchövningar efter löpning</h3>
+                        <p>Återhämtning är viktigt! Här är de bästa stretchövningarna för att mjuka upp musklerna.</p>
+                        <div class="video-placeholder">
+                            <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                    </article>
+                    <article class="tip-item technique">
+                        <img src="https://via.placeholder.com/300x200/FFD1DC/555555?text=Andningsteknik" alt="Andningsteknik bild">
+                        <h3>Andningsteknik för löpare</h3>
+                        <p>Optimera din andning för att förbättra din uthållighet och prestation.</p>
+                        </article>
+                </div>
+            </div>
+        </section>
 
-            <label for="meddelande">Meddelande:</label>
-            <textarea id="meddelande" name="meddelande" required></textarea>
+        <section id="forum" class="forum-section">
+            <div class="container">
+                <h2>Vårt Forum</h2>
+                <p>Här kan medlemmar diskutera löpning, ställa frågor, dela med sig av erfarenheter och hitta löparkompisar.</p>
+                <div class="forum-placeholder">
+                    <p><strong>OBS:</strong> Ett fullt fungerande forum kräver en backend och databas. Denna sektion är en platshållare.</p>
+                    <a href="#" class="btn-secondary">Gå till forumet (kommer snart!)</a>
+                    </div>
+            </div>
+        </section>
 
-            <button type="submit">Skicka</button>
-        </form>
-    </section>
+        <section id="instagram" class="instagram-section">
+            <div class="container">
+                <h2>Följ oss på Instagram!</h2>
+                <p>Se de senaste bilderna från våra löppass, event och gemenskap.</p>
+                <div class="instagram-feed-placeholder">
+                    <p><strong>Platshållare för Instagram-flöde.</strong> För att visa ditt Instagram-flöde här, behöver du använda en tredjeparts-tjänst (som t.ex. <a href="https://lightwidget.com/" target="_blank">LightWidget</a>, <a href="https://snapwidget.com/" target="_blank">SnapWidget</a>) eller implementera Instagram Graph API (kräver utvecklaruppsättning).</p>
+                    <p>Besök vårt konto direkt: <a href="https://www.instagram.com/sheruns.sthlm/" target="_blank">@sheruns.sthlm</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="join" class="join-section">
+            <div class="container">
+                <h2>Bli en del av She Runs Sthlm!</h2>
+                <p>Registrera dig idag och börja din löparresa med en fantastisk gemenskap.</p>
+                <div class="registration-form">
+                    <p><strong>OBS:</strong> Medlemsregistrering kräver en backend för att hantera användardata och säkerhet. Detta är en platshållare för formuläret.</p>
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Namn:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-post:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Lösenord:</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Registrera mig!</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 Kvinnliga Löparklubben Stockholm</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="https://via.placeholder.com/100x50/FFC0CB/FFFFFF?text=She+Runs+Sthlm" alt="She Runs Sthlm Logotyp">
+                </div>
+                <div class="footer-links">
+                    <h3>Snabblänkar</h3>
+                    <ul>
+                        <li><a href="#about">Om oss</a></li>
+                        <li><a href="#tips">Löpartips</a></li>
+                        <li><a href="#forum">Forum</a></li>
+                        <li><a href="#join">Bli medlem</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Följ oss</h3>
+                    <a href="https://www.instagram.com/sheruns.sthlm/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+            </div>
+            <p>&copy; 2025 She Runs Sthlm. Alla rättigheter förbehållna.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>

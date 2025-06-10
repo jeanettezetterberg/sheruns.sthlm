@@ -1,71 +1,536 @@
-body {
-    font-family: Arial, sans-serif;
+/* Grundläggande reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
-    color: #333;
+    box-sizing: border-box;
 }
 
-header {
-    background-color: #d81b60;
-    color: white;
-    padding: 1em;
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fcf6f9; /* Mycket ljusrosa/beige */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Typografi */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #d16ba5; /* Mörkare rosa för rubriker */
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3.5em;
     text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: #d16ba5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Knappar */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: #ff8fab; /* Mellanrosa */
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #e67d98; /* Mörkare rosa */
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #d16ba5;
+    border: 2px solid #d16ba5;
+}
+
+.btn-secondary:hover {
+    background-color: #fce4ec; /* Ljusrosa bakgrund */
+    transform: translateY(-2px);
+}
+
+
+/* Header */
+header {
+    background-color: #ffc0cb; /* Ljusrosa */
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px; /* Justera logotypens höjd */
+    display: block;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
+    list-style: none;
 }
 
-nav li {
-    display: inline;
-    margin: 0 15px;
+nav ul li {
+    display: inline-block;
+    margin-left: 30px;
 }
 
-nav a {
-    color: white;
+nav ul li a {
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d16ba5; /* Mörkare rosa vid hover */
     text-decoration: none;
-    font-weight: bold;
 }
 
+.hamburger {
+    display: none; /* Dölj på desktop */
+    font-size: 2em;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Hero sektion */
+.hero-section {
+    background: linear-gradient(rgba(255, 192, 203, 0.7), rgba(255, 127, 169, 0.7)), url('https://via.placeholder.com/1600x700/FFC0CB/FFFFFF?text=Spring+med+oss!') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 600px;
+}
+
+.hero-content p {
+    font-size: 1.4em;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* Sektioner generellt */
 section {
-    padding: 2em;
-    background-color: white;
-    margin: 1em auto;
-    max-width: 800px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 80px 0;
 }
 
-form {
+section:nth-child(even) {
+    background-color: #fdeaf2; /* Lätt ljusrosa bakgrund */
+}
+
+/* Om oss sektion */
+.about-section {
+    text-align: center;
+}
+
+/* Gemenskap sektion */
+.community-section {
+    text-align: center;
+    background-color: #fff; /* Vit bakgrund */
+}
+
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.community-item {
+    background-color: #ffedf2; /* Mycket ljusrosa */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.community-item:hover {
+    transform: translateY(-10px);
+}
+
+.community-item i {
+    font-size: 3em;
+    color: #ff8fab;
+    margin-bottom: 20px;
+}
+
+.community-item h3 {
+    color: #d16ba5;
+    margin-bottom: 10px;
+}
+
+/* Löpartips sektion */
+.tips-section {
+    background-color: #fdeaf2;
+    text-align: center;
+}
+
+.tip-categories {
+    margin-bottom: 40px;
+}
+
+.tip-category-btn {
+    background-color: #ff8fab;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.tip-category-btn:hover, .tip-category-btn.active {
+    background-color: #d16ba5;
+}
+
+.tip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tip-item {
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.tip-item:hover {
+    transform: translateY(-10px);
+}
+
+.tip-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.tip-item h3 {
+    margin: 20px 20px 10px 20px;
+    color: #d16ba5;
+}
+
+.tip-item p {
+    padding: 0 20px 20px 20px;
+    font-size: 0.95em;
+    color: #555;
+}
+
+.tip-item .video-placeholder {
+    padding: 0 20px 20px 20px;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.tip-item .video-placeholder iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+
+/* Forum och Medlemsregistrering (platshållare stilar) */
+.forum-section, .join-section {
+    text-align: center;
+}
+
+.forum-placeholder, .registration-form {
+    background-color: #ffedf2;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 40px auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.registration-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #d16ba5;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ff8fab;
+    border-radius: 8px;
+    font-size: 1em;
+    background-color: #fff;
+    color: #333;
+}
+
+.registration-form input[type="text"]:focus,
+.registration-form input[type="email"]:focus,
+.registration-form input[type="password"]:focus {
+    outline: none;
+    border-color: #d16ba5;
+    box-shadow: 0 0 0 3px rgba(209, 107, 165, 0.2);
+}
+
+.registration-form button {
+    width: auto;
+    margin-top: 20px;
+}
+
+/* Instagram sektion */
+.instagram-section {
+    text-align: center;
+    background-color: #fff;
+}
+
+.instagram-feed-placeholder {
+    margin-top: 40px;
+    background-color: #ffedf2;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-form input, form textarea {
-    margin-bottom: 1em;
-    padding: 0.5em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.instagram-feed-placeholder img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-form button {
-    background-color: #d81b60;
-    color: white;
-    border: none;
-    padding: 0.75em;
-    cursor: pointer;
-    border-radius: 4px;
+.instagram-feed-placeholder p {
+    font-size: 1.1em;
+    color: #555;
 }
 
-form button:hover {
-    background-color: #ad1457;
+.instagram-link {
+    display: block;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #ff8fab;
+    font-size: 1.2em;
 }
 
+/* Footer */
 footer {
+    background-color: #ffc0cb;
+    color: #fff;
+    padding: 40px 0;
     text-align: center;
-    padding: 1em;
-    background-color: #eee;
-    margin-top: 2em;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.footer-logo img {
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+.footer-links, .footer-social {
+    flex: 1;
+    min-width: 150px;
+    margin: 0 20px;
+    text-align: left;
+}
+
+.footer-links h3, .footer-social h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #d16ba5;
+    text-decoration: none;
+}
+
+.footer-social a {
+    color: #fff;
+    font-size: 1.8em;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #d16ba5;
+}
+
+/* Responsiv design */
+@media (max-width: 900px) {
+    h1 {
+        font-size: 2.8em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    .community-grid, .tip-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Visa hamburgerikonen */
+    }
+
+    nav .nav-links {
+        display: none; /* Dölj nav-länkar som standard */
+        flex-direction: column;
+        width: 100%;
+        background-color: #ffc0cb;
+        position: absolute;
+        top: 90px; /* Under header */
+        left: 0;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    nav .nav-links.active {
+        display: flex; /* Visa nav-länkar när aktiv */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hero-section {
+        padding: 100px 20px;
+        min-height: 450px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo, .footer-links, .footer-social {
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .footer-social a {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .tip-category-btn {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
 }
